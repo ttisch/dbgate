@@ -6,7 +6,7 @@ const {
 } = require('../frontend/profilerFunctions');
 
 module.exports = {
-  packageName: 'dbgate-plugin-mongo',
+  packageName: 'dbgate-plugin-mongo-v3',
   drivers: [driver],
   functions: {
     formatProfilerEntry,

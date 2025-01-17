@@ -1,11 +1,11 @@
 {
-  "name": "dbgate-plugin-mongo",
+  "name": "dbgate-plugin-mongo-v3",
   "main": "dist/backend.js",
-  "version": "6.0.0-alpha.1",
+  "version": "0.0.2",
   "license": "GPL-3.0",
-  "author": "Jan Prochazka",
+  "author": "Thomas Tisch",
   "homepage": "https://dbgate.org",
-  "description": "MongoDB connect plugin for DbGate",
+  "description": "MongoDB connect plugin for DbGate for MongoDB 2.x and 3.x",
   "repository": {
     "type": "git",
     "url": "https://github.com/dbgate/dbgate"
@@ -25,9 +25,9 @@
     "build:frontend:watch": "webpack --watch --config webpack-frontend.config",
     "build:backend": "webpack --config webpack-backend.config.js",
     "build": "yarn build:frontend && yarn build:backend",
-    "plugin": "yarn build && yarn pack && dbgate-plugin dbgate-plugin-mongo",
-    "copydist": "yarn build && yarn pack && dbgate-copydist ../dist/dbgate-plugin-mongo",
-    "plugout": "dbgate-plugout dbgate-plugin-mongo",
+    "plugin": "yarn build && yarn pack && dbgate-plugin dbgate-plugin-mongo-v3",
+    "copydist": "yarn build && yarn pack && dbgate-copydist ../dist/dbgate-plugin-mongo-v3",
+    "plugout": "dbgate-plugout dbgate-plugin-mongo-v3",
     "prepublishOnly": "yarn build"
   },
   "devDependencies": {
@@ -41,7 +41,7 @@
     "dbgate-tools": "^6.0.0-alpha.1",
     "is-promise": "^4.0.0",
     "lodash": "^4.17.21",
-    "mongodb": "^6.3.0"
+    "mongodb": "^3.0.0"
   },
   "optionalDependencies": {
     "mongodb-client-encryption": "^6.1.1"
